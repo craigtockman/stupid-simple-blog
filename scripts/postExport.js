@@ -23,7 +23,7 @@ const rssXml = `<?xml version="1.0" encoding="UTF-8" ?>
       <atom:link href="https://stupid-simple-blog.com/rss.xml" rel="self" type="application/rss+xml" />
       <title>Stupid Simple Blog.</title>
       <link>https://stupid-simple-blog.com</link>
-      <description>Stories about Popes nude bar..</description>
+      <description>A Stupid Simple Blog demo witn next.js.</description>
       <image>
           <url>https://stupid-simple-blog.com/apple-touch-icon-152x152.png</url>
           <title>Stupid Simple Blog.</title>
