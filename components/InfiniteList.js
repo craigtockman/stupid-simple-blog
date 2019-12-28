@@ -22,15 +22,15 @@ export default function Index() {
       }
 
       const newBlogs = result
-        .map((story, index) => ({
-          name: story.data.name,
-          timestamp: new Date(story.created_at).toLocaleDateString(
+        .map((blog, index) => ({
+          name: blog.data.name,
+          timestamp: new Date(blog.created_at).toLocaleDateString(
             'en-US',
             options
           ),
-          location: story.data.location,
-          ...(story.data.photo ? { photo: story.data.photo.url } : {}),
-          id: story.id
+          location: blog.data.location,
+          ...(blog.data.photo ? { photo: blog.data.photo.url } : {}),
+          id: blog.id
         }))
         .reverse()
       setData(newBlogs)
@@ -79,33 +79,33 @@ export default function Index() {
       <h4 className='center'>Check out these {totalBlogs} blog posts below.</h4>
       <ul>
         {sliceOfBlogs
-          .map(story => (
-            <li key={story.id}>
-              <span className='storyTop'>
+          .map(blog => (
+            <li key={blog.id}>
+              <span className='blogTop'>
                 <span>
                   <FaceIcon style={{ fontSize: 50, marginLeft: '-4px' }} />
                 </span>
                 <div>
-                  <a href={`blog-post/${story.id}`} className='name'>
-                    {story.name}
+                  <a href={`blog-post/${blog.id}`} className='name'>
+                    {blog.name}
                   </a>
                   <br />
-                  <span>Posted on {story.timestamp}</span>
+                  <span>Posted on {blog.timestamp}</span>
                 </div>
               </span>
               <p>
                 <span
                   dangerouslySetInnerHTML={{
-                    __html: story.location
+                    __html: blog.location
                       .substring(0, 500)
                       .replace(/\n/g, '<br />')
                   }}
                 />
                 <span>
-                  ... <a href={`blog-post/${story.id}`}>Read more</a>
+                  ... <a href={`blog-post/${blog.id}`}>Read more</a>
                 </span>
               </p>
-              {story.photo && <img src={story.photo} />}
+              {blog.photo && <img src={blog.photo} />}
             </li>
           ))
           // Show newest posts first
@@ -113,7 +113,7 @@ export default function Index() {
       </ul>
       <style jsx>
         {`
-          .storyTop {
+          .blogTop {
             color: #000;
             display: flex;
             margin-bottom: 10px;
