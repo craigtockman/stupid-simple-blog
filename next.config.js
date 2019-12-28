@@ -22,12 +22,19 @@ module.exports = {
         description:
           'A stupid simple free Next.js photo blog with a Netlify form database, infinite scroll, metatags and more.'
       },
+      '/about': {
+        page: '/about',
+        publishedSitemap: '2019-12-27T03:36:27.377Z',
+        publishedRSS: 'Fri, 27 Dec 2019 03:36:28 GMT',
+        title: 'Stupid Simple Blog | About',
+        description: 'Stupid Simple Blog about page'
+      },
       '/add-blog-post': {
         page: '/add-blog-post',
         publishedSitemap: '2019-12-27T03:36:27.377Z',
         publishedRSS: 'Fri, 27 Dec 2019 03:36:28 GMT',
         title: 'Add a blog post',
-        description: 'Stupid Simple Blog | Add a blog post'
+        description: 'Stupid Simple Blog add a blog post page'
       }
     }
 

@@ -41,13 +41,17 @@ export default function HamburgerMenu() {
       >
         <MenuItem>
           <Link href='/'>
-            <a style={linkStyle}>Home page</a>
+            <a style={linkStyle}>Homepage</a>
           </Link>
         </MenuItem>
-
         <MenuItem>
           <Link href='/add-blog-post'>
             <a style={linkStyle}>Add blog post</a>
+          </Link>
+        </MenuItem>
+        <MenuItem>
+          <Link href='/about'>
+            <a style={linkStyle}>About us</a>
           </Link>
         </MenuItem>
       </Menu>

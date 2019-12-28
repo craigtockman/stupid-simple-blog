@@ -18,9 +18,15 @@
             <pubDate>Fri, 03 Mar 2006 03:36:28 GMT</pubDate>
         </item>
         <item>
+            <title>Stupid Simple Blog | About</title>
+            <guid>https://stupid-simple-blog.com/about</guid>
+            <description>Stupid Simple Blog about page</description>
+            <pubDate>Fri, 27 Dec 2019 03:36:28 GMT</pubDate>
+        </item>
+        <item>
             <title>Add a blog post</title>
             <guid>https://stupid-simple-blog.com/add-blog-post</guid>
-            <description>Stupid Simple Blog | Add a blog post</description>
+            <description>Stupid Simple Blog add a blog post page</description>
             <pubDate>Fri, 27 Dec 2019 03:36:28 GMT</pubDate>
         </item>
         <item>

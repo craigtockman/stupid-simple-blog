@@ -20,9 +20,7 @@ export default function Index() {
         <div className='center'>
           <img src='/blog_01.jpeg' alt='Stupid Simple Blog' />
           <p className='courtesty'>
-            <a href='https://www.flickr.com/photos/rheinitz/'>
-              Courtesy of Craig Tockman
-            </a>
+            <a href='https://craigtockman.com/'>Courtesy of Craig Tockman</a>
           </p>
           <p className='btn'>
             <Link href='/add-blog-post' as='/add-blog-post'>
