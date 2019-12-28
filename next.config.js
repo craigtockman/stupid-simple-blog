@@ -10,6 +10,7 @@ module.exports = {
   exportPathMap: async function() {
     const paths = {
       '/': { page: '/' },
+      '/about': { page: '/about' },
       '/add-blog-post': { page: '/add-blog-post' }
     }
     const homeTime = new Date().toISOString()
