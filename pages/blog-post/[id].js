@@ -142,10 +142,11 @@ Sighting.getInitialProps = async ({ query }) => {
     return ids
   })
 
-  // function to get the correct index number based it's value
+  // function to get the correct index number based on it's value
   const getKeyByValue = (object, value) => {
     return Object.keys(object).find(key => object[key] === value)
   }
+  // Pagination stuff
   const indexNumber = getKeyByValue(getAllKeyID, query.id)
   const addNumber = parseInt(indexNumber) - 1
   const subtractNumber = parseInt(indexNumber) + 1
@@ -154,6 +155,7 @@ Sighting.getInitialProps = async ({ query }) => {
     addNumber < subs.length && addNumber > -1 ? subs[addNumber].id : null
   const nextPage = subtractNumber < subs.length ? subs[subtractNumber].id : null
 
+  // Add to our result array
   result['prevPage'] = prevPage
   result['nextPage'] = nextPage
   return {
