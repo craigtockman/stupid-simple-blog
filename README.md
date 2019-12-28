@@ -1,6 +1,6 @@
 # stupid-simple-blog
 
-A stupid simple Serverless Next.js blog With a Netlify API form database as the backend by Craig Tockman https://craigtockman.com
+A stupid simple Serverless Next.js blog with a Netlify API form database as the backend by Craig Tockman https://craigtockman.com
 
 The instructions: https://medium.com/@craigory/build-a-stupid-simple-serverless-next-js-blog-f2bb84f1e7e
 
