@@ -21,10 +21,10 @@ const Sighting = props => (
       <Title />
       <div className='center'>
         {props.result.data.photo ? (
-          <img src={props.result.data.photo.url} alt='Popes' />
+          <img src={props.result.data.photo.url} alt='A chihuahua' />
         ) : (
           <div className='center-inner'>
-            <img alt='Popes' src='/blog_01.jpeg' />
+            <img alt='A chihuahua' src='/blog_01.jpeg' />
           </div>
         )}
         <h1>{props.result.name}</h1>
