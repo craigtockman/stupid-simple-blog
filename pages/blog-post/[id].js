@@ -23,9 +23,7 @@ const Sighting = props => (
         {props.result.data.photo ? (
           <img src={props.result.data.photo.url} alt='A chihuahua' />
         ) : (
-          <div className='center-inner'>
-            <img alt='A chihuahua' src='/blog_01.jpeg' />
-          </div>
+          <img alt='A chihuahua' src='/blog_01.jpeg' />
         )}
         <h1>{props.result.name}</h1>
       </div>
@@ -81,11 +79,6 @@ const Sighting = props => (
           }
           .center {
             text-align: center;
-          }
-          .center-inner {
-            text-align: left;
-            margin: 0 auto;
-            max-width: 400px;
           }
           .btn {
             margin-top: 20px;
