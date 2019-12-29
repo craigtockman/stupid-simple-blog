@@ -132,8 +132,8 @@ export default function Index() {
           }
           li {
             border-top: 1px solid #f2f2f2;
-            margin: 30px 0;
-            padding: 30px 0 0;
+            margin: 44px 0;
+            padding: 40px 0 0;
           }
           li p {
             color: #666

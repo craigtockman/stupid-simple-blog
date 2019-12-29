@@ -76,20 +76,18 @@ const Sighting = props => (
             line-height: 1;
             margin: 40px 0;
           }
-          .center {
-            text-align: center;
-          }
           .btn {
-            margin-top: 20px;
+            margin-top: 28px;
           }
           img {
             height: auto;
+            margin-bottom: 28px;
             max-width: 100%;
           }
           .arrowBtns {
-            padding: 4px 0;
-            display: flex;
             align-items: center;
+            display: flex;
+            margin: 28px 0;
           }
           a + a {
             margin-left: 8px;

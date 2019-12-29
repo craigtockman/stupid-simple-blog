@@ -19,9 +19,6 @@ function Title(props) {
           a:hover {
             text-decoration: none;
           }
-          .center {
-            text-align: center;
-          }
         `}
       </style>
     </div>

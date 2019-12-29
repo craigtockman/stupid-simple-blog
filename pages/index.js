@@ -42,26 +42,7 @@ export default function Index() {
               max-width: 100%;
             }
             .btn {
-              margin: 20px 0 0;
-            }
-            ul {
-              padding: 0;
-              list-style: none;
-            }
-            li {
-              border-bottom: 1px solid #f2f2f2;
-              margin: 30px 0 0;
-              padding: 0 0 30px;
-            }
-            li p {
-              color: #666;
-            }
-            li p,
-            li h5 {
-              margin: 0 0 4px;
-            }
-            .center {
-              text-align: center;
+              margin: 28px 0 0;
             }
           `}
         </style>

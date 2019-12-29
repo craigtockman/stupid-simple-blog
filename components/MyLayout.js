@@ -162,6 +162,9 @@ export default function Layout(props) {
             position: absolute;
             top: 10px;
           }
+          .center {
+            text-align: center;
+          }
           @media (max-width: 628px) {
             h1 {
               font-size: 1.3em;
