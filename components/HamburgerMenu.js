@@ -40,18 +40,23 @@ export default function HamburgerMenu() {
         onClose={handleClose}
       >
         <MenuItem>
-          <Link href='/'>
+          <Link href='/' as='/'>
             <a style={linkStyle}>Homepage</a>
           </Link>
         </MenuItem>
         <MenuItem>
-          <Link href='/add-blog-post'>
+          <Link href='/add-blog-post' as='/add-blog-post'>
             <a style={linkStyle}>Add blog post</a>
           </Link>
         </MenuItem>
         <MenuItem>
-          <Link href='/about'>
+          <Link href='/about' as='/about'>
             <a style={linkStyle}>About us</a>
+          </Link>
+        </MenuItem>
+        <MenuItem>
+          <Link href='/contact' as='/contact'>
+            <a style={linkStyle}>Contact us</a>
           </Link>
         </MenuItem>
       </Menu>
