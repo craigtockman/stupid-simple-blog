@@ -18,14 +18,13 @@ const Sighting = props => (
       url={props.result.id}
     />
     <Layout>
-      <Title />
+      <Title h2={props.result.name} />
       <div className='center'>
         {props.result.data.photo ? (
           <img src={props.result.data.photo.url} alt='A chihuahua' />
         ) : (
           <img alt='A chihuahua' src='/blog_01.jpeg' />
         )}
-        <h1>{props.result.name}</h1>
       </div>
       <div>
         <p

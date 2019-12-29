@@ -1,5 +1,6 @@
 import Layout from '../components/MyLayout'
 import MetaTags from '../components/MetaTags'
+import Title from '../components/Title'
 
 export default function About() {
   return (
@@ -11,10 +12,12 @@ export default function About() {
         url='about'
       />
       <Layout>
-        <h1>About Stupid Simple Blog</h1>
-        <h2>Tell your mom about this website and thanks for visiting.</h2>
+        <Title
+          h1={'About this stupid Blog'}
+          h2={'Tell your mom about this blog and thanks for visiting.'}
+        />
         <p>
-          Learn how to build this site here:
+          Learn how to build this blog here:
           <br />
           <a href='https://medium.com/@craigory/build-a-stupid-simple-serverless-next-js-blog-f2bb84f1e7e'>
             https://medium.com/@craigory/build-a-stupid-simple-serverless-next-js-blog-f2bb84f1e7e

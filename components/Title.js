@@ -1,12 +1,14 @@
-function Title() {
+function Title(props) {
+  const { h1, h2 } = props
   return (
     <div className='center'>
       <a href='/'>
-        <h1 className='title'>A Stupid Simple Blog</h1>
+        <h1 className='title'>{h1 ? h1 : 'A Stupid Simple Blog'}</h1>
       </a>
       <h2>
-        A stupid simple free Next.js photo blog with a Netlify form database,
-        infinite scroll, metatags and more.
+        {h2
+          ? h2
+          : 'A stupid simple free Next.js photo blog with a Netlify form database, infinite scroll, metatags and more.'}
       </h2>
       <style jsx>
         {`

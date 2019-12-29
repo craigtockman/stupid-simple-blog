@@ -1,5 +1,6 @@
 import Layout from '../components/MyLayout'
 import MetaTags from '../components/MetaTags'
+import Title from '../components/Title'
 import { makeStyles } from '@material-ui/core/styles'
 import { FormControl, Button, TextField } from '@material-ui/core'
 
@@ -21,10 +22,12 @@ export default function Form() {
         url='add-blog-post'
       />
       <Layout>
-        <h1>Add a blog post to this stupid blog!!!</h1>
-        <h2>
-          Ok. Calm down. Add a blog post and upload a photo if you got one.
-        </h2>
+        <Title
+          h1={'Add a blog post to this stupid blog!!!'}
+          h2={
+            'Ok. Calm down. Add a blog post and upload a photo if you got one.'
+          }
+        />
         <form
           name='blog'
           method='post'
