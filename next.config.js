@@ -11,7 +11,9 @@ module.exports = {
     const paths = {
       '/': { page: '/' },
       '/about': { page: '/about' },
-      '/add-blog-post': { page: '/add-blog-post' }
+      '/add-blog-post': { page: '/add-blog-post' },
+      '/contact': { page: '/contact' },
+      '/message-sent': { page: '/message-sent' }
     }
     const homeTime = new Date().toISOString()
     const xml = {
