@@ -42,7 +42,7 @@ export default function Index() {
               max-width: 100%;
             }
             .btn {
-              margin: 28px 0 0;
+              margin: 20px 0 0;
             }
           `}
         </style>

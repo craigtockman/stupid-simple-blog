@@ -139,9 +139,6 @@ export default function Index() {
             color: #666
             margin: 0 0 4px;
           }
-          .center {
-            text-align: center;
-          }
           .name {
             font-weight: bold;
             font-size: 1.2em;
