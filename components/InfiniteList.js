@@ -28,6 +28,7 @@ export default function Index() {
             'en-US',
             options
           ),
+          postTime: blog.created_at,
           location: blog.data.location,
           ...(blog.data.photo ? { photo: blog.data.photo.url } : {}),
           id: blog.id
@@ -74,6 +75,11 @@ export default function Index() {
     }, 100)
   }
 
+  // Takes about 5 minutes to build the site so hide the homepage links for 5 minutes
+  const theTime = new Date()
+  const add5min = theTime.setMinutes(theTime.getMinutes() - 5)
+  const theBuildTime = new Date(add5min).toISOString()
+
   return (
     <>
       <h4 className='center'>Check out these {totalBlogs} blog posts below.</h4>
@@ -86,10 +92,20 @@ export default function Index() {
                   <FaceIcon style={{ fontSize: 50, marginLeft: '-4px' }} />
                 </span>
                 <div>
-                  <a href={`blog-post/${blog.id}`} className='name'>
-                    {blog.name}
-                  </a>
-                  <br />
+                  {theBuildTime > blog.postTime ? (
+                    <>
+                      <a href={`blog-post/${blog.id}`} className='name'>
+                        {blog.name}
+                      </a>
+                      <br />
+                    </>
+                  ) : (
+                    <>
+                      <span className='name'>{blog.name}</span>{' '}
+                      <span>🤓...page is building</span>
+                      <br />
+                    </>
+                  )}
                   <span>Posted on {blog.timestamp}</span>
                 </div>
               </span>
@@ -101,9 +117,13 @@ export default function Index() {
                       .replace(/\n/g, '<br />')
                   }}
                 />
-                <span>
-                  ... <a href={`blog-post/${blog.id}`}>Read more</a>
-                </span>
+                {theBuildTime > blog.postTime ? (
+                  <>
+                    ... <a href={`blog-post/${blog.id}`}>Read more</a>
+                  </>
+                ) : (
+                  <span>... 🤓page is building</span>
+                )}
               </p>
               {blog.photo && <img src={blog.photo} />}
             </li>

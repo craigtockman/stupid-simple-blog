@@ -50,7 +50,7 @@ module.exports = {
         page: '/message-sent',
         publishedSitemap: '2019-12-27T03:36:27.377Z',
         publishedRSS: 'Fri, 27 Dec 2019 03:36:28 GMT',
-        title: 'Stupid Simple Blog | Massage sent',
+        title: 'Stupid Simple Blog | Message sent',
         description: 'Stupid Simple Blog'
       }
     }
