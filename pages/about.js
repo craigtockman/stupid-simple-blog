@@ -23,6 +23,13 @@ export default function About() {
             https://medium.com/@craigory/build-a-stupid-simple-serverless-next-js-blog-f2bb84f1e7e
           </a>
         </p>
+        <p>
+          Get the code here:
+          <br />
+          <a href='https://github.com/craigtockman/stupid-simple-blog'>
+            https://github.com/craigtockman/stupid-simple-blog
+          </a>
+        </p>
         <h2>What's included</h2>
         <ul>
           <li>Continuous deployment with Netlify, React.js and Next.js</li>
