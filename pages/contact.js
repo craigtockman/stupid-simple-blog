@@ -24,11 +24,9 @@ export default function Contact() {
       <Layout>
         <Title
           h1={'Contact us'}
-          h2={
-            'Contact us about anything in the world that may be disturbing you.'
-          }
+          h2={'Got an inquiry about this stupid blog?'}
         />
-        <p>Fill out this form and we will respond before 2023.</p>
+        <p>Fill out this form and we will respond as soon as possible.</p>
         <form
           name='contact'
           method='post'
