@@ -18,7 +18,11 @@ export default function Index() {
       <Layout>
         <Title />
         <div className='center'>
-          <img src='/blog_01.jpeg' alt='Stupid Simple Blog' />
+          <img
+            src='/blog_01.jpeg'
+            alt='Bubba Sparks Jr'
+            className='imgShadow'
+          />
           <p className='courtesty'>
             <a href='https://craigtockman.com/'>Courtesy of Craig Tockman</a>
           </p>

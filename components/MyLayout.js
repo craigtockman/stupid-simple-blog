@@ -154,6 +154,10 @@ export default function Layout(props) {
             height: auto;
             max-width: 100%;
           }
+          .imgShadow {
+            border-radius: 4px;
+            box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2);
+          }
           h1 {
             margin: 20px 0 0;
           }

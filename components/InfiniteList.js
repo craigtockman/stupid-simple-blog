@@ -125,7 +125,9 @@ export default function Index() {
                   <span>... 🤓page is building</span>
                 )}
               </p>
-              {blog.photo && <img src={blog.photo} />}
+              {blog.photo && (
+                <img src={blog.photo} className='imgShadow' alt={blog.name} />
+              )}
             </li>
           ))
           // Show newest posts first
