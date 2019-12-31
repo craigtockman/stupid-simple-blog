@@ -40,6 +40,9 @@ function Footer(props) {
           a {
             color: #333;
           }
+          a:hover {
+            color: #666;
+          }
           footer {
             margin-top: 32px;
           }
