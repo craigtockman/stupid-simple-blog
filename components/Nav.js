@@ -64,6 +64,7 @@ export default function Header() {
           }
           .flexLogo {
             font-size: 1em;
+            font-weight: bold;
           }
 
           @media (min-width: 520px) {

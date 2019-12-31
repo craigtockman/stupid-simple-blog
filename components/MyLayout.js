@@ -172,6 +172,7 @@ export default function Layout(props) {
           @media (max-width: 628px) {
             h1 {
               font-size: 1.3em;
+              font-weight: bold;
               margin: 20px 0 0;
             }
             h2 {
