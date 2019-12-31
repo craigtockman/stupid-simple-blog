@@ -3,7 +3,7 @@ function Title(props) {
   return (
     <div className='center'>
       <a href='/'>
-        <h1 className='title'>{h1 ? h1 : 'A Stupid Simple Blog'}</h1>
+        <h1 className='title'>{h1 ? h1 : 'Stupid Simple Blog'}</h1>
       </a>
       <h2>
         {h2
