@@ -75,7 +75,7 @@ export default function Index() {
     }, 100)
   }
 
-  // Takes about 5 minutes to build the site so hide the homepage links for 5 minutes
+  // Takes about 5 minutes to build the site so hide the new homepage link to blog page for 5 minutes
   const theTime = new Date()
   const add5min = theTime.setMinutes(theTime.getMinutes() - 5)
   const theBuildTime = new Date(add5min).toISOString()
@@ -109,6 +109,11 @@ export default function Index() {
                   <span>Posted on {blog.timestamp}</span>
                 </div>
               </span>
+              {blog.photo && (
+                <p>
+                  <img src={blog.photo} className='imgShadow' alt={blog.name} />
+                </p>
+              )}
               <p>
                 <span
                   dangerouslySetInnerHTML={{
@@ -125,9 +130,6 @@ export default function Index() {
                   <span>... 🤓page is building</span>
                 )}
               </p>
-              {blog.photo && (
-                <img src={blog.photo} className='imgShadow' alt={blog.name} />
-              )}
             </li>
           ))
           // Show newest posts first

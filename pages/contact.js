@@ -7,8 +7,7 @@ import { FormControl, Button, TextField } from '@material-ui/core'
 const useStyles = makeStyles(theme => ({
   textField: {
     width: '100%'
-  },
-  upload: { margin: '8px 0 32px' }
+  }
 }))
 
 export default function Contact() {
