@@ -8,7 +8,8 @@ The demo: https://fervent-darwin-dd9d67.netlify.com/
 
 # What’s included
 
-- Continuous deployment with Netlify, React.js and Next.js .
+- Continuous deployment with Netlify, React.js and Next.js.
+- Super snappy fast page loads.
 - A Netlify blog post form with image file upload.
 - Seo friendly dynamic meta-tag component.
 - RSS and Sitemap xml generator.
