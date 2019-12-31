@@ -6,7 +6,11 @@ function MetaTags(props) {
     <Head>
       <title>{title}</title>
       <meta charSet='UTF-8' />
-      <meta name='google-site-verification' content='add_your_codecode_here' />
+      <meta
+        name='google-site-verification'
+        //This is mine. Put in yours.
+        content='HabODiNw2QM-uAewuNUWD7YisenHh6JJrHDhDNNTurs'
+      />
       <meta
         name='viewport'
         content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'
@@ -27,8 +31,16 @@ function MetaTags(props) {
       <meta name='twitter:card' content='summary' />
       <meta name='twitter:title' content={title} />
       <meta name='twitter:description' content={desc} />
-      <meta name='twitter:site' content='@your_twitter' />
-      <meta name='twitter:creator' content='@your_twitter' />
+      <meta
+        name='twitter:site'
+        //This is mine. Put in yours.
+        content='@craigtockman'
+      />
+      <meta
+        name='twitter:creator'
+        //This is mine. Put in yours.
+        content='@craigtockman'
+      />
       <link rel='icon' href='/favicon-32.png' sizes='32x32' />
       <link rel='icon' href='/favicon-57.png' sizes='57x57' />
       <link rel='icon' href='/favicon-76.png' sizes='76x76' />
