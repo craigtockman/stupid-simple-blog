@@ -4,7 +4,7 @@ A stupid simple Serverless Next.js blog with a Netlify API form database as the 
 
 The instructions: https://medium.com/@craigory/build-a-stupid-simple-serverless-next-js-blog-f2bb84f1e7e
 
-The demo: https://fervent-darwin-dd9d67.netlify.com/
+The demo: https://stupidsimple.blog/
 
 # What’s included
 
