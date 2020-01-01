@@ -9,7 +9,7 @@ The demo: https://stupidsimple.blog/
 # What’s included
 
 - Continuous deployment with Netlify, React.js and Next.js.
-- Super snappy fast page loads.
+- Super snappy fast page loads because its JAMStack, serverless and static!
 - A Netlify blog post form with image file upload.
 - Seo friendly dynamic meta-tag component.
 - RSS and Sitemap xml generator.
@@ -20,7 +20,6 @@ The demo: https://stupidsimple.blog/
 - Email notifications of new blog posts.
 - React hooks only up in here.
 - A sweet header that follow you down the screen.
-- JAMStack what up!
 - A contact form and about us page.
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/837ef194-9f4b-4fe5-83b0-137194555398/deploy-status)](https://app.netlify.com/sites/fervent-darwin-dd9d67/deploys)
