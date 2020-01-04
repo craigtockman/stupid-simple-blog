@@ -1,10 +1,19 @@
 import TwitterIcon from '@material-ui/icons/Twitter'
+import FacebookIcon from '@material-ui/icons/Facebook'
 import LinkedInIcon from '@material-ui/icons/LinkedIn'
 import InstagramIcon from '@material-ui/icons/Instagram'
 import WebIcon from '@material-ui/icons/Web'
 
 function Footer(props) {
-  const { blogName, instagram, linkedin, trademark, twitter, website } = props
+  const {
+    blogName,
+    facebook,
+    instagram,
+    linkedin,
+    trademark,
+    twitter,
+    website
+  } = props
   const date = new Date()
   const year = date.getFullYear()
   return (
@@ -22,6 +31,11 @@ function Footer(props) {
         {twitter && (
           <a href={`https://twitter.com/${twitter}`} target='_blank'>
             <TwitterIcon height='24px' width='24px' titleAccess='Twitter' />
+          </a>
+        )}
+        {facebook && (
+          <a href={`https://www.facebook.com/${facebook}`} target='_blank'>
+            <FacebookIcon height='24px' width='24px' titleAccess='Facebook' />
           </a>
         )}
         {linkedin && (
