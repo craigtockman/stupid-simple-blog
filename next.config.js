@@ -63,8 +63,8 @@ module.exports = {
       form_id: '5e06ad5c43277b00085c6a8a'
     })
     const fetchData = () => {
-      result.map(car => {
-        const { id, created_at, name, data } = car
+      result.map(post => {
+        const { id, created_at, name, data } = post
 
         const time = created_at.toString()
         const timeSitemap = new Date(time).toISOString()

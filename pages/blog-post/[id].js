@@ -5,7 +5,7 @@ import Title from '../../components/Title'
 import ArrowBackIcon from '@material-ui/icons/ArrowBack'
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward'
 
-const Sighting = props => (
+const Post = props => (
   <>
     <MetaTags
       title={`${props.result.name}`}
@@ -118,7 +118,7 @@ const Sighting = props => (
   </>
 )
 
-Sighting.getInitialProps = async ({ query }) => {
+Post.getInitialProps = async ({ query }) => {
   const NetlifyAPI = require('netlify')
   const client = new NetlifyAPI(process.env.NETLIFY_TOKEN)
 
@@ -157,4 +157,4 @@ Sighting.getInitialProps = async ({ query }) => {
   }
 }
 
-export default Sighting
+export default Post

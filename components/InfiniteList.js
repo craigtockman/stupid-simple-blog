@@ -87,7 +87,7 @@ export default function Index() {
         {sliceOfBlogs
           .map(blog => (
             <li key={blog.id}>
-              <span className='blogTop'>
+              <div className='blogTop'>
                 <span>
                   <FaceIcon style={{ fontSize: 50, marginLeft: '-4px' }} />
                 </span>
@@ -108,7 +108,7 @@ export default function Index() {
                   )}
                   <span>Posted on {blog.timestamp}</span>
                 </div>
-              </span>
+              </div>
               {blog.photo && (
                 <p>
                   <img src={blog.photo} className='imgShadow' alt={blog.name} />
