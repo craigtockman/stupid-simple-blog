@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://stupidsimple.blog/</loc>
-    <lastmod>2020-01-04T03:44:50.332Z</lastmod>
+    <lastmod>2020-06-20T05:39:07.931Z</lastmod>
   </url>
   <url>
     <loc>https://stupidsimple.blog/about</loc>
@@ -19,6 +19,18 @@
   <url>
     <loc>https://stupidsimple.blog/message-sent</loc>
     <lastmod>2019-12-27T03:36:27.377Z</lastmod>
+  </url>
+  <url>
+    <loc>https://stupidsimple.blog/blog-post/5ee68d8e01b09e273000aff4</loc>
+    <lastmod>2020-06-14T20:50:22.539Z</lastmod>
+  </url>
+  <url>
+    <loc>https://stupidsimple.blog/blog-post/5ec047330d8ec8b0dcce6d9c</loc>
+    <lastmod>2020-05-16T20:04:03.507Z</lastmod>
+  </url>
+  <url>
+    <loc>https://stupidsimple.blog/blog-post/5ead44bfd3f6e1cf952e6c48</loc>
+    <lastmod>2020-05-02T10:00:31.789Z</lastmod>
   </url>
   <url>
     <loc>https://stupidsimple.blog/blog-post/5e06cf9e8a035a3444deba71</loc>

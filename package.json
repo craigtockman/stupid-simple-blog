@@ -3,10 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next",
+    "dev": "rimraf db/* && mkdirp ./db && npm run createsitemap && npm run postexport && next",
     "build": "next build",
     "start": "next start",
     "export": "npm run build && next export",
+    "createsitemap": "node scripts/createSitemap.js",
     "postexport": "node scripts/postExport.js"
   },
   "keywords": [],
