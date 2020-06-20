@@ -1,58 +1,58 @@
-const fs = require('fs')
-require('dotenv').config()
-const NetlifyAPI = require('netlify')
+const fs = require("fs")
+require("dotenv").config()
+const NetlifyAPI = require("netlify")
 const client = new NetlifyAPI(process.env.NETLIFY_TOKEN)
 
 module.exports = {
   env: {
-    NETLIFY_TOKEN: process.env.NETLIFY_TOKEN
+    NETLIFY_TOKEN: process.env.NETLIFY_TOKEN,
   },
-  exportPathMap: async function() {
+  exportPathMap: async function () {
     const paths = {
-      '/': { page: '/' },
-      '/about': { page: '/about' },
-      '/add-blog-post': { page: '/add-blog-post' },
-      '/contact': { page: '/contact' },
-      '/message-sent': { page: '/message-sent' }
+      "/": { page: "/" },
+      "/about": { page: "/about" },
+      "/add-blog-post": { page: "/add-blog-post" },
+      "/contact": { page: "/contact" },
+      "/message-sent": { page: "/message-sent" },
     }
     const homeTime = new Date().toISOString()
     const xml = {
-      '/': {
-        page: '/',
+      "/": {
+        page: "/",
         publishedSitemap: homeTime,
-        publishedRSS: 'Fri, 03 Mar 2006 03:36:28 GMT',
-        title: 'Stupid Simple Blog | Homepage',
+        publishedRSS: "Fri, 03 Mar 2006 03:36:28 GMT",
+        title: "Stupid Simple Blog | Homepage",
         description:
-          'A stupid simple free Next.js photo blog with a Netlify form database, infinite scroll, metatags and more.'
+          "A stupid simple free Next.js photo blog with a Netlify form database, infinite scroll, metatags and more.",
       },
-      '/about': {
-        page: '/about',
-        publishedSitemap: '2019-12-27T03:36:27.377Z',
-        publishedRSS: 'Fri, 27 Dec 2019 03:36:28 GMT',
-        title: 'Stupid Simple Blog | About',
-        description: 'Stupid Simple Blog about page'
+      "/about": {
+        page: "/about",
+        publishedSitemap: "2019-12-27T03:36:27.377Z",
+        publishedRSS: "Fri, 27 Dec 2019 03:36:28 GMT",
+        title: "Stupid Simple Blog | About",
+        description: "Stupid Simple Blog about page",
       },
-      '/add-blog-post': {
-        page: '/add-blog-post',
-        publishedSitemap: '2019-12-27T03:36:27.377Z',
-        publishedRSS: 'Fri, 27 Dec 2019 03:36:28 GMT',
-        title: 'Add a blog post',
-        description: 'Stupid Simple Blog add a blog post page'
+      "/add-blog-post": {
+        page: "/add-blog-post",
+        publishedSitemap: "2019-12-27T03:36:27.377Z",
+        publishedRSS: "Fri, 27 Dec 2019 03:36:28 GMT",
+        title: "Add a blog post",
+        description: "Stupid Simple Blog add a blog post page",
       },
-      '/contact': {
-        page: '/contact',
-        publishedSitemap: '2019-12-27T03:36:27.377Z',
-        publishedRSS: 'Fri, 27 Dec 2019 03:36:28 GMT',
-        title: 'Stupid Simple Blog | Contact',
-        description: 'Stupid Simple Blog contact page'
+      "/contact": {
+        page: "/contact",
+        publishedSitemap: "2019-12-27T03:36:27.377Z",
+        publishedRSS: "Fri, 27 Dec 2019 03:36:28 GMT",
+        title: "Stupid Simple Blog | Contact",
+        description: "Stupid Simple Blog contact page",
       },
-      '/message-sent': {
-        page: '/message-sent',
-        publishedSitemap: '2019-12-27T03:36:27.377Z',
-        publishedRSS: 'Fri, 27 Dec 2019 03:36:28 GMT',
-        title: 'Stupid Simple Blog | Message sent',
-        description: 'Stupid Simple Blog'
-      }
+      "/message-sent": {
+        page: "/message-sent",
+        publishedSitemap: "2019-12-27T03:36:27.377Z",
+        publishedRSS: "Fri, 27 Dec 2019 03:36:28 GMT",
+        title: "Stupid Simple Blog | Message sent",
+        description: "Stupid Simple Blog",
+      },
     }
 
     // Create paths based on the form submission/s id
@@ -60,12 +60,11 @@ module.exports = {
 
     const result = await client.listFormSubmissions({
       // Enter YOUR netlify form id here. This one is mine.
-      form_id: '5e06ad5c43277b00085c6a8a'
+      form_id: "5e06ad5c43277b00085c6a8a",
     })
     const fetchData = () => {
-      result.map(post => {
+      result.map((post) => {
         const { id, created_at, name, data } = post
-
         const time = created_at.toString()
         const timeSitemap = new Date(time).toISOString()
         const timeRSS = new Date(time).toUTCString()
@@ -75,12 +74,12 @@ module.exports = {
           publishedSitemap: timeSitemap,
           publishedRSS: timeRSS,
           title: `${name} just made a test post at the super simple blog.`,
-          description: `${data.location}`
+          description: `${data.location}`,
         }
 
         paths[`/blog-post/${id}`] = {
-          page: '/blog-post/[id]',
-          query: { id: `${id}` }
+          page: "/blog-post/[id]",
+          query: { id: `${id}` },
         }
 
         // create sitemap
@@ -91,5 +90,5 @@ module.exports = {
 
     fetchData()
     return paths
-  }
+  },
 }
