@@ -1,5 +1,5 @@
-const dbSitemap = require("../db/sitemap.json")
-const fs = require("fs")
+const dbSitemap = require('../db/sitemap.json')
+const fs = require('fs')
 
 const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${Object.keys(
@@ -12,10 +12,10 @@ const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
     <lastmod>${dbSitemap[path].publishedSitemap}</lastmod>
   </url>`
   )
-  .join("")}
+  .join('')}
 </urlset>`
 
-fs.writeFileSync("public/sitemap.xml", sitemapXml)
+fs.writeFileSync('public/sitemap.xml', sitemapXml)
 
 const rssXml = `<?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
@@ -39,7 +39,7 @@ const rssXml = `<?xml version="1.0" encoding="UTF-8" ?>
             <pubDate>${dbSitemap[path].publishedRSS}</pubDate>
         </item>`
         )
-        .join("")}
+        .join('')}
     </channel>
 </rss>`
-fs.writeFileSync("public/rss.xml", rssXml)
+fs.writeFileSync('public/rss.xml', rssXml)

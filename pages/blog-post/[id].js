@@ -5,130 +5,124 @@ import Title from '../../components/Title'
 import ArrowBackIcon from '@material-ui/icons/ArrowBack'
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward'
 
-const Post = props => (
-  <>
-    <MetaTags
-      title={`${props.result.name}`}
-      desc='Stupid Simple Blog | A blog post'
-      image={
-        props.result.data.photo
-          ? props.result.data.photo.url
-          : 'https://stupid-simple-blog.com/blog_01.jpeg'
-      }
-      url={props.result.id}
-    />
-    <Layout>
-      <Title h2={props.result.name} />
-      <div className='center'>
-        {props.result.data.photo ? (
-          <img
-            alt={props.result.name}
-            className='imgShadow'
-            src={props.result.data.photo.url}
+export default function Post(props) {
+  const { name, location, data, id, prevPage, nextPage } = props.result
+  return (
+    <>
+      <MetaTags
+        title={name}
+        desc={data.location.replace(/&/g, 'and')}
+        image={
+          data.photo
+            ? data.photo.url
+            : 'https://stupid-simple-blog.com/blog_01.jpeg'
+        }
+        url={id}
+      />
+      <Layout>
+        <Title h2={name} />
+        <div className="center">
+          {data.photo ? (
+            <img alt={name} className="imgShadow" src={data.photo.url} />
+          ) : (
+            <img alt="A chihuahua" className="imgShadow" src="/blog_01.jpeg" />
+          )}
+        </div>
+        <div>
+          <p
+            dangerouslySetInnerHTML={{
+              __html: data.location.replace(/\n/g, '<br />'),
+            }}
           />
-        ) : (
-          <img alt='A chihuahua' className='imgShadow' src='/blog_01.jpeg' />
-        )}
-      </div>
-      <div>
-        <p
-          dangerouslySetInnerHTML={{
-            __html: props.result.data.location.replace(/\n/g, '<br />')
-          }}
-        />
-        <p className='btn'>
-          <span className='arrowBtns'>
-            {props.result.prevPage && (
-              <Link
-                href='/blog-post/[id]'
-                as={`/blog-post/${props.result.prevPage}`}
-              >
-                <a className='arrowBtn'>
-                  <ArrowBackIcon
-                    fontSize='small'
-                    height='16px'
-                    width='16px'
-                    titleAccess='Previous post'
-                  />
-                </a>
+          <p className="btn">
+            <span className="arrowBtns">
+              {prevPage && (
+                <Link href="/blog-post/[id]" as={`/blog-post/${prevPage}`}>
+                  <a className="arrowBtn">
+                    <ArrowBackIcon
+                      fontSize="small"
+                      height="16px"
+                      width="16px"
+                      titleAccess="Previous post"
+                    />
+                  </a>
+                </Link>
+              )}
+              <Link href="/" as="/">
+                <a className="arrowBtn arrowHome">All Blogs</a>
               </Link>
-            )}
-            <Link href='/' as='/'>
-              <a className='arrowBtn arrowHome'>All Blogs</a>
-            </Link>
-            {props.result.nextPage && (
-              <Link
-                href='/blog-post/[id]'
-                as={`/blog-post/${props.result.nextPage}`}
-              >
-                <a className='arrowBtn'>
-                  <ArrowForwardIcon
-                    fontSize='small'
-                    height='16px'
-                    width='16px'
-                    titleAccess='Next post'
-                  />
-                </a>
-              </Link>
-            )}
-          </span>
-        </p>
-      </div>
-      <style jsx>
-        {`
-          h1 {
-            line-height: 1;
-            margin: 40px 0;
-          }
-          .btn {
-            margin-top: 28px;
-          }
-          img {
-            height: auto;
-            margin-bottom: 28px;
-            max-width: 100%;
-          }
-          .arrowBtns {
-            align-items: center;
-            display: flex;
-            margin: 28px 0;
-          }
-          a + a {
-            margin-left: 8px;
-          }
-          .arrowBtn {
-            display: flex;
-            color: #333333;
-            border: 1px solid #333;
-            border-radius: 4px;
-            padding: 2px;
-            min-height: 20px;
-          }
-          .arrowBtn:hover {
-            background-color: #eee;
-          }
-          .arrowHome {
-            font-size: 0.875em;
-            text-decoration: none;
-            padding: 1px 4px;
-          }
-        `}
-      </style>
-    </Layout>
-  </>
-)
+              {nextPage && (
+                <Link href="/blog-post/[id]" as={`/blog-post/${nextPage}`}>
+                  <a className="arrowBtn">
+                    <ArrowForwardIcon
+                      fontSize="small"
+                      height="16px"
+                      width="16px"
+                      titleAccess="Next post"
+                    />
+                  </a>
+                </Link>
+              )}
+            </span>
+          </p>
+        </div>
+        <style jsx>
+          {`
+            h1 {
+              line-height: 1;
+              margin: 40px 0;
+            }
+            .btn {
+              margin-top: 28px;
+            }
+            img {
+              height: auto;
+              margin-bottom: 28px;
+              max-width: 100%;
+            }
+            .arrowBtns {
+              align-items: center;
+              display: flex;
+              margin: 28px 0;
+            }
+            a + a {
+              margin-left: 8px;
+            }
+            .arrowBtn {
+              display: flex;
+              color: #333333;
+              border: 1px solid #333;
+              border-radius: 4px;
+              padding: 2px;
+              min-height: 20px;
+            }
+            .arrowBtn:hover {
+              background-color: #eee;
+            }
+            .arrowHome {
+              font-size: 0.875em;
+              text-decoration: none;
+              padding: 1px 4px;
+            }
+          `}
+        </style>
+      </Layout>
+    </>
+  )
+}
 
-Post.getInitialProps = async ({ query }) => {
+Post.getInitialProps = async function (context) {
+  const { id } = context.query
   const NetlifyAPI = require('netlify')
   const client = new NetlifyAPI(process.env.NETLIFY_TOKEN)
 
   // Get each form submissions id
   const result = await client.listFormSubmission({
-    submission_id: query.id
+    submission_id: id,
   })
   const subs = await client.listFormSubmissions({
     // Enter YOUR netlify form id here. This one is mine.
-    form_id: '5e06ad5c43277b00085c6a8a'
+    form_id: '5e06ad5c43277b00085c6a8a',
   })
 
   const getAllKeyID = subs.map((entry, index) => {
@@ -138,10 +132,10 @@ Post.getInitialProps = async ({ query }) => {
 
   // function to get the correct index number based on it's value
   const getKeyByValue = (object, value) => {
-    return Object.keys(object).find(key => object[key] === value)
+    return Object.keys(object).find((key) => object[key] === value)
   }
   // Pagination stuff
-  const indexNumber = getKeyByValue(getAllKeyID, query.id)
+  const indexNumber = getKeyByValue(getAllKeyID, id)
   const addNumber = parseInt(indexNumber) - 1
   const subtractNumber = parseInt(indexNumber) + 1
 
@@ -153,8 +147,6 @@ Post.getInitialProps = async ({ query }) => {
   result['prevPage'] = prevPage
   result['nextPage'] = nextPage
   return {
-    result
+    result,
   }
 }
-
-export default Post

@@ -6,10 +6,10 @@ export default function About() {
   return (
     <>
       <MetaTags
-        title='Stupid Simple Blog | About'
-        desc='A simple next.js, netlify form database blog with material ui, metatags, infinite scroll and more.'
-        image='https://stupid-simple-blog.com/blog_01.jpeg'
-        url='about'
+        title="Stupid Simple Blog | About"
+        desc="A simple next.js, netlify form database blog with material ui, metatags, infinite scroll and more."
+        image="https://stupid-simple-blog.com/blog_01.jpeg"
+        url="about"
       />
       <Layout>
         <Title
@@ -19,14 +19,14 @@ export default function About() {
         <p>
           Learn how to build this blog here:
           <br />
-          <a href='https://medium.com/@craigory/build-a-stupid-simple-serverless-next-js-blog-f2bb84f1e7e'>
+          <a href="https://medium.com/@craigory/build-a-stupid-simple-serverless-next-js-blog-f2bb84f1e7e">
             https://medium.com/@craigory/build-a-stupid-simple-serverless-next-js-blog-f2bb84f1e7e
           </a>
         </p>
         <p>
           Get the code here:
           <br />
-          <a href='https://github.com/craigtockman/stupid-simple-blog'>
+          <a href="https://github.com/craigtockman/stupid-simple-blog">
             https://github.com/craigtockman/stupid-simple-blog
           </a>
         </p>

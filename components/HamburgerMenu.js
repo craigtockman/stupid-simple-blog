@@ -3,18 +3,17 @@ import Menu from '@material-ui/core/Menu'
 import MenuItem from '@material-ui/core/MenuItem'
 import Link from 'next/link'
 import MenuIcon from '@material-ui/icons/Menu'
-import Fab from '@material-ui/core/Fab'
 
 const linkStyle = {
   display: 'block',
   textDecoration: 'none',
-  width: '100%'
+  width: '100%',
 }
 
 export default function HamburgerMenu() {
   const [anchorEl, setAnchorEl] = useState(null)
 
-  const handleClick = event => {
+  const handleClick = (event) => {
     setAnchorEl(event.currentTarget)
   }
 
@@ -24,38 +23,38 @@ export default function HamburgerMenu() {
 
   return (
     <div>
-      <Fab
-        size='small'
-        aria-controls='simple-menu'
-        aria-haspopup='true'
+      <MenuIcon
+        height="24px"
+        width="24px"
+        aria-controls="simple-menu"
+        aria-haspopup="true"
         onClick={handleClick}
-      >
-        <MenuIcon height='24px' width='24px' />
-      </Fab>
+        style={{ cursor: 'pointer' }}
+      />
       <Menu
-        id='simple-menu'
+        id="simple-menu"
         anchorEl={anchorEl}
         keepMounted
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
         <MenuItem>
-          <Link href='/' as='/'>
+          <Link href="/" as="/">
             <a style={linkStyle}>Homepage</a>
           </Link>
         </MenuItem>
         <MenuItem>
-          <Link href='/add-blog-post' as='/add-blog-post'>
+          <Link href="/add-blog-post" as="/add-blog-post">
             <a style={linkStyle}>Add blog post</a>
           </Link>
         </MenuItem>
         <MenuItem>
-          <Link href='/about' as='/about'>
+          <Link href="/about" as="/about">
             <a style={linkStyle}>About us</a>
           </Link>
         </MenuItem>
         <MenuItem>
-          <Link href='/contact' as='/contact'>
+          <Link href="/contact" as="/contact">
             <a style={linkStyle}>Contact us</a>
           </Link>
         </MenuItem>

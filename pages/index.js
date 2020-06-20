@@ -11,27 +11,27 @@ export default function Index() {
   return (
     <>
       <MetaTags
-        title='Stupid Simple Blog'
-        desc='A simple next.js, netlify form database blog with material ui, metatags, infinite scroll and more.'
-        image='https://stupid-simple-blog.com/blog_01.jpeg'
+        title="Stupid Simple Blog"
+        desc="A simple next.js, netlify form database blog with material ui, metatags, infinite scroll and more."
+        image="https://stupid-simple-blog.com/blog_01.jpeg"
       />
       <Layout>
         <Title />
-        <div className='center'>
+        <div className="center">
           <img
-            src='/blog_01.jpeg'
-            alt='Bubba Sparks Jr'
-            className='imgShadow'
+            src="/blog_01.jpeg"
+            alt="Bubba Sparks Jr"
+            className="imgShadow"
           />
-          <p className='courtesty'>
-            <a href='https://craigtockman.com/'>Courtesy of Craig Tockman</a>
+          <p className="courtesty">
+            <a href="https://craigtockman.com/">Courtesy of Craig Tockman</a>
           </p>
-          <p className='btn'>
-            <Link href='/add-blog-post' as='/add-blog-post'>
+          <p className="btn">
+            <Link href="/add-blog-post" as="/add-blog-post">
               <Button
-                variant='contained'
-                color='primary'
-                startIcon={<CloudUploadIcon height='24' width='24' />}
+                variant="contained"
+                color="primary"
+                startIcon={<CloudUploadIcon height="24px" width="24px" />}
               >
                 Add a blog post
               </Button>

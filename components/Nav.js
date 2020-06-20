@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react'
+import AddIcon from '@material-ui/icons/Add'
 import HamburgerMenu from './HamburgerMenu'
 import Link from 'next/link'
-import Fab from '@material-ui/core/Fab'
-import AddIcon from '@material-ui/icons/Add'
 
 export default function Header() {
   const [scrollY, setScrollY] = useState(0)
@@ -28,29 +27,29 @@ export default function Header() {
     transform: scrollY > 50 ? 'translate(0, 0)' : 'translate(0, -60px)',
     transition: 'box-shadow .25s ease-in-out, transform .25s ease-in-out',
     width: '100%',
-    zIndex: 100
+    zIndex: 100,
   }
 
-  const linkStyle = {
-    color: '#333',
-    textDecoration: 'none'
-  }
   return (
-    <header className='header' style={header}>
-      <div className='flexHeader'>
-        <div className='flexLeft'>
+    <header className="header" style={header}>
+      <div className="flexHeader">
+        <div className="flexLeft">
           <HamburgerMenu />
         </div>
-        <div className='flexLogo'>
-          <Link href='/'>
-            <a style={linkStyle}>Stupid Simple Blog</a>
+        <div className="flexLogo">
+          <Link href="/">
+            <a className="linkStyle">Stupid Simple Blog</a>
           </Link>
         </div>
-        <div className='flexRight'>
-          <Link href='/add-blog-post'>
-            <Fab size='small' color='primary'>
-              <AddIcon height='24px' width='24px' />
-            </Fab>
+        <div className="flexRight">
+          <Link href="/add-blog-post">
+            <a>
+              <AddIcon
+                height="24px"
+                width="24px"
+                style={{ cursor: 'pointer', color: '#333' }}
+              />
+            </a>
           </Link>
         </div>
       </div>
@@ -65,6 +64,10 @@ export default function Header() {
           .flexLogo {
             font-size: 1em;
             font-weight: bold;
+          }
+          .linkStyle {
+            color: #333;
+            text-decoration: none;
           }
 
           @media (min-width: 520px) {

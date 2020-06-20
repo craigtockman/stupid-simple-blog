@@ -1,4 +1,3 @@
-const fs = require("fs")
 require("dotenv").config()
 const NetlifyAPI = require("netlify")
 const client = new NetlifyAPI(process.env.NETLIFY_TOKEN)
@@ -28,7 +27,6 @@ module.exports = {
         }
       })
     }
-
     makePaths()
     return paths
   },
